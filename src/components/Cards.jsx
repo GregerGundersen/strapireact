@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import axios from "axios";
 import { URL } from "../utils/api";
 import { CardsStyled } from "./Cards.styled";
+import gold from "../media/gold.svg";
 
 function Cards() {
   const [data, setData] = useState([]);
@@ -27,7 +28,10 @@ function Cards() {
                   </div>
                   <div className="champions_card__name">
                     <p>{champion.attributes.name}</p>
-                    <p>{champion.attributes.cost}</p>
+                    <div className="cost">
+                      <img src={gold} />
+                      <p>{champion.attributes.cost}</p>
+                    </div>
                   </div>
                 </li>
               );
