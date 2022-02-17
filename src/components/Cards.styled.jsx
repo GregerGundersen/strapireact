@@ -11,6 +11,12 @@ export const CardsStyled = styled.div`
     margin: 0 8.33%;
 
     .champions_card {
+      transition: 0.2s;
+
+      &:hover {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        scale: 1.05;
+      }
       .champions_card__img {
         filter: brightness(90%);
         height: 9rem;
@@ -43,6 +49,10 @@ export const CardsStyled = styled.div`
         background-color: hsl(209, 85%, 15%);
         border-bottom-left-radius: 7%;
         border-bottom-right-radius: 7%;
+
+        .cost {
+          display: flex;
+        }
 
         p {
           font-size: 1.2rem;
