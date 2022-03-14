@@ -3,6 +3,7 @@ import axios from "axios";
 import { URL } from "../utils/api";
 import { CardsStyled } from "./Cards.styled";
 import gold from "../media/gold.svg";
+import { Link } from "react-router-dom";
 
 function Cards() {
   const [data, setData] = useState([]);
@@ -21,11 +22,14 @@ function Cards() {
           ? data.map((champion, idx) => {
               return (
                 <li className="champions_card" key={idx}>
-                  <div className="champions_card__img">
+                  <Link
+                    to={"/champion/" + champion.id}
+                    className="champions_card__img"
+                  >
                     <img src={champion.attributes.url}></img>
                     <p className="trait">{champion.attributes.trait}</p>
                     <p className="origin">{champion.attributes.origin}</p>
-                  </div>
+                  </Link>
                   <div className="champions_card__name">
                     <p>{champion.attributes.name}</p>
                     <div className="cost">
