@@ -1,6 +1,9 @@
 import styled from "styled-components";
 
 export const CardsStyled = styled.div`
+  a {
+    color: white;
+  }
   box-sizing: border-box;
   .champions {
     list-style: none;
@@ -15,10 +18,10 @@ export const CardsStyled = styled.div`
 
       &:hover {
         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-        scale: 1.05;
+        scale: 1.02;
       }
       .champions_card__img {
-        filter: brightness(90%);
+        /* filter: brightness(90%); */
         height: 9rem;
         position: relative;
         text-align: center;
@@ -38,6 +41,7 @@ export const CardsStyled = styled.div`
         }
 
         img {
+          filter: brightness(80%);
           height: 9rem;
           width: 100%;
           object-fit: cover;
